@@ -45,6 +45,9 @@ import categoriesListData from "layouts/dashboard/data/categoriesListData";
 
 import bgImage from "assets/images/backdrop.jpg";
 //const bgImage ="https://wallpapers.com/images/high/fight-til-the-end-manchester-city-logo-imhal7zgyvzpnwaw.webp"
+import VideoPlayer from "./Video";
+// @mui material components
+import Card from "@mui/material/Card";
 
   function Default() {
   const { size } = typography;
@@ -61,6 +64,7 @@ import bgImage from "assets/images/backdrop.jpg";
     }}
     >
       <DashboardNavbar />
+      <br />
       <ArgonBox py={3}>
         <Grid container spacing={1} mb={1}>
           <Grid item xs={12} md={1} lg={3.5}>
@@ -105,6 +109,9 @@ import bgImage from "assets/images/backdrop.jpg";
             <Slider />
           </Grid>
         </Grid>
+
+
+
         {/* { <Grid container spacing={3}>
           <Grid item xs={12} md={8}>
             <SalesTable title="Country Rankings" rows={salesTableData} />
@@ -113,6 +120,13 @@ import bgImage from "assets/images/backdrop.jpg";
             <CategoriesList title="Our Audience" categories={categoriesListData} />
           </Grid>
         </Grid> } */}
+
+      
+        <Card sx={{ position: "relative", display: "block", height: "120%", overflow: "hidden", width:"80%"}}>
+          <VideoPlayer />
+        </Card>
+      
+      
       </ArgonBox>
     </DashboardLayout>
   );
